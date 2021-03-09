@@ -30,5 +30,5 @@
 
 ## \# ERD
 - AQueryTool  
-  URL : 
-  Password : 
+  URL : https://aquerytool.com:443/aquerymain/index/?rurl=481ccd35-4e7a-4529-9b3f-bd126c65fcc6&
+  Password : 012upj
