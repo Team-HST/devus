@@ -22,6 +22,7 @@
 - Next.js
 - Design / https://ant.design/
 - Styled-Components
+- Redux, Redux-Saga
 
 ## \# Cloud
 - AWS
