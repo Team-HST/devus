@@ -4,11 +4,12 @@ import { Layout, Row } from 'antd';
 const { Content } = Layout;
 
 export const StyleRow = styled(Row)`
-  overflow: auto;
   height: 100vh;
+  overflow: hidden;
 `;
 
 export const StyleContent = styled(Content)`
+  overflow: auto;
   padding: 20px;
-  height: 80%;
+  height: 95vh;
 `;

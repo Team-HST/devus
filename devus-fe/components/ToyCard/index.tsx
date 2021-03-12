@@ -1,4 +1,5 @@
-import { StyleArticle, StyleCardImage, StyleContent, StyleDate } from './style';
+import { HeartFilled } from '@ant-design/icons';
+import { StyleArticle, StyleCardImage, StyleContent, StyleDate, StyleUsContDiv } from './style';
 
 const ToyCard = () => {
   return (
@@ -12,6 +13,10 @@ const ToyCard = () => {
           runway heading towards a streamlined cloud solution.
         </p>
         <StyleDate>2020.01.03</StyleDate>
+        <StyleUsContDiv>
+          <HeartFilled />
+          1000
+        </StyleUsContDiv>
       </StyleContent>
     </StyleArticle>
   );
