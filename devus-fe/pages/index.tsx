@@ -1,7 +1,11 @@
+import MainLayout from 'components/MainLayout';
+import ToyCard from 'components/ToyCard';
+
 const Home = () => (
-  <>
-    <h1>Hello DevUs 👋</h1>
-  </>
+  <MainLayout>
+    <ToyCard />
+    <ToyCard />
+  </MainLayout>
 );
 
 export default Home;
