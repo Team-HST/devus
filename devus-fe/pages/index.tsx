@@ -5,6 +5,11 @@ const Home = () => (
   <MainLayout>
     <ToyCard />
     <ToyCard />
+    <ToyCard />
+    <ToyCard />
+    <ToyCard />
+    <ToyCard />
+    <ToyCard />
   </MainLayout>
 );
 

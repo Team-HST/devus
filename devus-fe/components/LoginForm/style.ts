@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const StyleLoginDiv = styled.div`
+  height: 100%;
   padding: 50px 30px 50px;
   text-align: center;
   font-size: 15px;

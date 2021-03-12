@@ -65,3 +65,7 @@ export const StyleDate = styled.span`
   font-size: 13px;
   font-weight: bold;
 `;
+
+export const StyleUsContDiv = styled.div`
+  float: right;
+`;
