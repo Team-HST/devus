@@ -12,7 +12,7 @@ const LoginForm = () => {
         <Space size="large">
           <StyleSocialImage src="/images/social/naver.png" alt="네이버 로그인" />
           <StyleSocialImage src="/images/social/kakao_128.png" alt="카카오 로그인" />
-          <StyleSocialImage src="/images/social/github_128.png" alt="카카오 로그인" />
+          <StyleSocialImage src="/images/social/github_128.png" alt="깃허브 로그인" />
         </Space>
       </StyleSocialDiv>
     </div>
