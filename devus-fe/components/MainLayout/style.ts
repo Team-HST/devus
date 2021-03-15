@@ -1,7 +1,15 @@
 import styled from 'styled-components';
 import { Layout, Row } from 'antd';
 
-const { Content } = Layout;
+const { Header, Content } = Layout;
+
+export const StyleLayout = styled(Layout)`
+  background-color: #e8eaef;
+`;
+
+export const StyleHeader = styled(Header)`
+  background-color: #e8eaef;
+`;
 
 export const StyleRow = styled(Row)`
   height: 100vh;

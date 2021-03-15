@@ -1,9 +1,10 @@
 import { ReactNode } from 'react';
+import AppHeader from 'components/AppHeader';
 import LoginForm from 'components/LoginForm';
 import { Layout, Col } from 'antd';
-import { StyleRow, StyleContent } from './style';
+import { StyleLayout, StyleHeader, StyleRow, StyleContent } from './style';
 
-const { Header } = Layout;
+const { Content } = Layout;
 
 type MainLayoutProps = {
   children: ReactNode;
@@ -11,17 +12,21 @@ type MainLayoutProps = {
 
 const MainLayout = ({ children }: MainLayoutProps) => {
   return (
-    <StyleRow>
-      <Col xs={24} md={6}>
-        <LoginForm />
-      </Col>
-      <Col xs={24} md={18}>
-        <Layout>
-          <Header>Header</Header>
-          <StyleContent style={{ background: '#e8eaef' }}>{children}</StyleContent>
-        </Layout>
-      </Col>
-    </StyleRow>
+    <StyleLayout>
+      <StyleHeader>
+        <AppHeader />
+      </StyleHeader>
+      <Content>
+        <StyleRow>
+          <Col xs={24} md={6}>
+            <LoginForm />
+          </Col>
+          <Col xs={24} md={18}>
+            <StyleContent>{children}</StyleContent>
+          </Col>
+        </StyleRow>
+      </Content>
+    </StyleLayout>
   );
 };
 

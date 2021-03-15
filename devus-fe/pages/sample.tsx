@@ -21,7 +21,7 @@ const Sameple = () => {
 
   useEffect(() => {
     dispatch(postActions.requestPostAction());
-  }, []);
+  }, [dispatch]);
 
   const onSearch = () => {
     dispatch(postActions.requestPostAction(searchText));
