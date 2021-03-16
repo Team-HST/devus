@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import AppHeader from 'components/AppHeader';
-import LoginForm from 'components/LoginForm';
+// import LoginForm from 'components/LoginForm';
+import UserProfile from 'components/UserProfile';
 import { Layout, Col } from 'antd';
 import { StyleLayout, StyleHeader, StyleRow, StyleContent } from './style';
 
@@ -19,7 +20,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
       <Content>
         <StyleRow>
           <Col xs={24} md={6}>
-            <LoginForm />
+            <UserProfile />
           </Col>
           <Col xs={24} md={18}>
             <StyleContent>{children}</StyleContent>
