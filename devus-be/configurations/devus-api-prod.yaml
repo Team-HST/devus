@@ -1,6 +1,6 @@
 spring:
-  profiles:
-    active: prod
+  profile:
+    actives: prod
   datasource:
     url: jdbc:mysql://hoons-aws-db-dev.cttkkceqgfsb.ap-northeast-2.rds.amazonaws.com:3306/devus
     username: hst
