@@ -14,3 +14,30 @@ spring:
       ddl-auto: none
       naming:
         physical-Strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+app:
+  security:
+    token-secret: 926D96C90030DD58429D2751AC1BDBBC
+    token-expirationMs: 864000000 # 10 days
+    public-paths:
+      defaults:
+        # basic web resources
+        - /
+        - /error
+        - /favicon.ico
+        - /**/*.png
+        - /**/*.gif
+        - /**/*.svg
+        - /**/*.jpg
+        - /**/*.html
+        - /**/*.css
+        - /**/*.js
+        # authentication apis
+        - /oauth2/**
+        # documentation paths
+        - /api-docs
+        - /api-docs/**
+        - /swagger-ui/**
+        - /swagger-ui.html
+        # Public apis
+        - /content/user/register
