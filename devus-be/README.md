@@ -20,7 +20,7 @@ devus-api-dev.yaml => {devus-api} 서비스 {dev} 환경 설정파일
 
 ## devus-api
 - devus 서비스 API 제공 앱
-- 프로젝트 설정파일은 
+- 프로젝트 설정파일은 `configurations` 및 `devus-config` 설명 참조
 
 ## devus-config
 - devus 서비스 설정파일 제공 앱
