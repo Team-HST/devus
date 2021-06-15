@@ -1,5 +1,8 @@
 package com.hst.devus.content.user.service;
 
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -16,7 +19,7 @@ import lombok.RequiredArgsConstructor;
  */
 @Service
 @RequiredArgsConstructor
-public class UserService {
+public class UserService implements UserDetailsService {
 
 	private final UserRepository userRepository;
 
@@ -79,4 +82,9 @@ public class UserService {
 		return userRepository.save(createdUser);
 	}
 
+	@Override
+	public User loadUserByUsername(String userNoString) throws UsernameNotFoundException {
+		Long userNo = Long.parseLong(userNoString);
+		return getUser(userNo);
+	}
 }

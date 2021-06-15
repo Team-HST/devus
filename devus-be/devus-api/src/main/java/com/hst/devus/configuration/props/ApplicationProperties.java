@@ -24,6 +24,10 @@ public class ApplicationProperties {
 		private String tokenSecret;
 		private Long tokenExpirationMs;
 
+		public List<String> getMergedPublicPaths() {
+			return this.publicPaths.getMergedPublicPaths();
+		}
+
 		@Data
 		public static class PublicPaths {
 			private List<String> defaults;

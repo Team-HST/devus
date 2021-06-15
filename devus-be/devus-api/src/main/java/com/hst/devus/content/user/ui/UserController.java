@@ -84,7 +84,7 @@ public class UserController {
 	@Operation(
 		summary = "사용자 회원 가입"
 	)
-	@PostMapping
+	@PostMapping("join")
 	public ResponseEntity<User> join(@RequestBody UserJoinRequest request) {
 		return ResponseEntity.ok(userService.joinUser(request));
 	}

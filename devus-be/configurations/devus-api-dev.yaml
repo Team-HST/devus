@@ -38,4 +38,4 @@ app:
         - /swagger-ui/**
         - /swagger-ui.html
         # Public apis
-        - /content/user/register
+        - /content/users/**
