@@ -6,7 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.hst.devus.content.user.entity.User;
 import com.hst.devus.content.user.exception.UserNotFoundException;
 import com.hst.devus.content.user.repository.UserRepository;
-import com.hst.devus.content.user.type.UserOAuthType;
+import com.hst.devus.content.user.type.UserOauthType;
 import com.hst.devus.content.user.ui.request.UserJoinRequest;
 
 import lombok.RequiredArgsConstructor;
@@ -39,6 +39,17 @@ public class UserService {
 	}
 
 	/**
+	 * 이메일과 OAuth타입으로 사용자 조회
+	 * @param email 이메일
+	 * @param oauthType oAuthType
+	 * @return 조회된 유저
+	 */
+	public User getUserByEmailAndOauthType(String email, UserOauthType oauthType) {
+		return userRepository.findByEmailAndOauthType(email, oauthType)
+			.orElseThrow(() -> new UserNotFoundException(email, oauthType));
+	}
+
+	/**
 	 * 어스네임 중복체크
 	 * @param usname 어스네임
 	 * @return 중복여부
@@ -61,7 +72,7 @@ public class UserService {
 	public User joinUser(UserJoinRequest request) {
 		User createdUser = User.builder()
 			.email(request.getEmail())
-			.oAuthType(UserOAuthType.getType(request.getOAuthType()))
+			.oauthType(UserOauthType.getType(request.getOAuthType()))
 			.usname(request.getUsname())
 			.build();
 		createdUser.changeProfileImageUrl(request.getProfileImageUrl());

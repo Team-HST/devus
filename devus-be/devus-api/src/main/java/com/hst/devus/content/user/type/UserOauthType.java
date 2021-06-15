@@ -12,13 +12,13 @@ import lombok.RequiredArgsConstructor;
  * @author dlgusrb0808@gmail.com
  */
 @RequiredArgsConstructor
-public enum UserOAuthType implements PersistableType<Integer> {
+public enum UserOauthType implements PersistableType<Integer> {
 	GITHUB(0, "github", "깃헙 계정"),
 	NAVER(1, "naver", "네이버 계정"),
 	KAKAO(2, "kakao", "카카오 계정")
 	;
 
-	private static Map<Integer, UserOAuthType> FIND = EnumUtils.asMap(UserOAuthType.class);
+	private static Map<Integer, UserOauthType> FIND = EnumUtils.asMap(UserOauthType.class);
 
 	private final int code;
 	private final String name;
@@ -39,13 +39,13 @@ public enum UserOAuthType implements PersistableType<Integer> {
 		return this.description;
 	}
 
-	public static UserOAuthType getType(int code) {
+	public static UserOauthType getType(int code) {
 		return FIND.get(code);
 	}
 
-	public static class Converter extends EnumAttributeConverter<UserOAuthType, Integer> {
+	public static class Converter extends EnumAttributeConverter<UserOauthType, Integer> {
 		public Converter() {
-			super(UserOAuthType.class, false);
+			super(UserOauthType.class, false);
 		}
 	}
 }

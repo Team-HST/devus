@@ -15,7 +15,7 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-import com.hst.devus.content.user.type.UserOAuthType;
+import com.hst.devus.content.user.type.UserOauthType;
 
 import lombok.AccessLevel;
 import lombok.Builder;
@@ -40,9 +40,9 @@ public class User {
 	@Column(name = "USER_EMAIL")
 	private String email;
 
-	@Convert(converter = UserOAuthType.Converter.class)
+	@Convert(converter = UserOauthType.Converter.class)
 	@Column(name = "USER_OAUTH_TYPE")
-	private UserOAuthType oAuthType;
+	private UserOauthType oauthType;
 
 	@Column(name = "USER_USNM")
 	private String usname;
@@ -77,9 +77,9 @@ public class User {
 	private String homepageUrl;
 
 	@Builder
-	public User(String email, UserOAuthType oAuthType, String usname) {
+	public User(String email, UserOauthType oauthType, String usname) {
 		this.email = email;
-		this.oAuthType = oAuthType;
+		this.oauthType = oauthType;
 		this.usname = usname;
 	}
 

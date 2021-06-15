@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.hst.devus.configuration.props.ApplicationProperties;
 import com.hst.devus.content.user.entity.User;
 import com.hst.devus.content.user.service.UserService;
+import com.hst.devus.content.user.type.UserOauthType;
 import com.hst.devus.content.user.ui.request.UserJoinRequest;
 
 import io.swagger.v3.oas.annotations.Operation;
@@ -66,6 +67,18 @@ public class UserController {
 	public ResponseEntity<User> getUserByUsname(@PathVariable String usname) {
 		log.info("usName : {}", usname);
 		return ResponseEntity.ok(userService.getUserByUsname(usname));
+	}
+
+	@Operation(
+		summary = "사용자 조회 by email & oauthType",
+		parameters = {
+			@Parameter(name = "email", in = ParameterIn.PATH, schema = @Schema(implementation = String.class)),
+			@Parameter(name = "oauthType", in = ParameterIn.PATH, schema = @Schema(implementation = Integer.class)),
+		}
+	)
+	@GetMapping("by-email-oauth-type/{email}/{oauthType}")
+	public ResponseEntity<User> getUserByEmailAndOauthType(@PathVariable String email, @PathVariable Integer oauthType) {
+		return ResponseEntity.ok(userService.getUserByEmailAndOauthType(email, UserOauthType.getType(oauthType)));
 	}
 
 	@Operation(
