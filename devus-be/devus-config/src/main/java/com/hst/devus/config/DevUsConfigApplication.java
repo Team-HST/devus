@@ -6,10 +6,10 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 
 @EnableConfigServer
 @SpringBootApplication
-public class DevusConfigApplication {
+public class DevUsConfigApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DevusConfigApplication.class, args);
+		SpringApplication.run(DevUsConfigApplication.class, args);
 	}
 
 }

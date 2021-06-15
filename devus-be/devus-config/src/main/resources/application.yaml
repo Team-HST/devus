@@ -1,6 +1,23 @@
 spring:
   application:
     name: devus-config
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev,native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: file://${HOME}/dev/hst/devus/devus-be/configurations
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
   cloud:
     config:
       server:
